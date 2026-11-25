@@ -1,0 +1,17 @@
+MODEL EVALUATION SUMMARY
+=======================
+Class distribution (whole dataset): {0: 5480, 1: 520}
+
+Cross-validation (5 stratified folds):
+              Model  Accuracy Mean  Accuracy Std  F1 Mean   F1 Std  Precision Mean  Precision Std  Recall Mean  Recall Std
+Logistic Regression       0.673333      0.013137 0.254019 0.013846        0.158419       0.008763     0.641824    0.044024
+      Random Forest       0.951875      0.005328 0.685915 0.045820        0.785611       0.024923     0.610643    0.061238
+
+Held-out test-set results:
+              Model  Accuracy  Precision   Recall       F1  ROC-AUC
+Logistic Regression     0.655   0.150901 0.644231 0.244526 0.712425
+      Random Forest     0.950   0.789474 0.576923 0.666667 0.879544
+
+Model with the highest test F1 in this run: Random Forest (F1=0.6667).
+Deployment decision should consider the cost of false negatives and false positives, not only accuracy.
+For an imbalanced dataset, precision-recall curves and recall/precision at a chosen threshold are often more useful than accuracy alone.
